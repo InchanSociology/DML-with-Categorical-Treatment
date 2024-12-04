@@ -9,19 +9,19 @@ A pre-print of the paper is available on SocArXiv: https://osf.io/preprints/soca
 
 This repository contains:
 
-1. R Markdown File (DML_with_Categorical_Treatments.Rmd):
+1. R Markdown File (\DML_with_Categorical_Treatments.Rmd`):
 A detailed explanation of the DML framework applied to categorical treatments. This includes:
 
 - The mathematical foundations of doubly robust estimation.
 - The process of extending the DML framework to three treatment categories.
 - Annotated R code for implementation.
 
-2. PDF File (DML_with_Categorical_Treatments.pdf):
+2. PDF File (\DML_with_Categorical_Treatments.pdf`):
 A rendered document summarizing the methodology, including:
 - Key equations and theoretical explanations.
 - R code snippets with step-by-step instructions.
 
-3. Sample Dataset (GOMS.txt):
+3. Sample Dataset (\GOMS.txt`):
 A simplified example dataset containing 740 observations.
 
 - Purpose: Since the full dataset used in the study is confidential and too large for practical use in this demonstration, this sample dataset has been created to match the purpose of illustrating the equations and R code.
