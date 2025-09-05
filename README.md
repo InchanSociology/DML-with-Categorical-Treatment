@@ -80,8 +80,8 @@ $$
 
 where:
 
-$$\hat{p}_t(X) = \mathbb{P}(T=t|X)$$:Generalized propensity score  
-$$\hat{g}_t(X) = \mathbb{E}[Y|T=t,X]$$:Outcome regression for treatment $$t$$  
+$$\hat{p}_t(X) = \mathbb{P}(T=t|X):Generalized propensity score $$
+$$\hat{g}_t(X) = \mathbb{E}[Y|T=t,X]:Outcome regression for treatment t $$
 
 ---
 
