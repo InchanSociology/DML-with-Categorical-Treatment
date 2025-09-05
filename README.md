@@ -70,8 +70,8 @@ where:
 ---
 
 ### 3. Extension to Multiple Treatments
-For $$ T \in \{1,2,3\}$$ 
-
+For 
+$$ T \in \{1,2,3\}$$  
 (e.g., three categories of college selectivity):
 
 $$
@@ -80,13 +80,14 @@ $$
 
 where:
 
-- $$\hat{p}_t(X) = \mathbb{P}(T=t|X)$$ : Generalized propensity score  
-- $$\hat{g}_t(X) = \mathbb{E}[Y|T=t,X]$$ : Outcome regression for treatment $$t$$  
+$$\hat{p}_t(X) = \mathbb{P}(T=t|X)$$ : Generalized propensity score  
+$$\hat{g}_t(X) = \mathbb{E}[Y|T=t,X]$$ : Outcome regression for treatment $$t$$  
 
 ---
 
 ### 4. Cross-Fitting
 To reduce overfitting bias, we use **cross-fitting**:
+
 $$
 \hat{\eta}^{(-k)} = \text{ML estimator trained on folds } \neq k
 $$
