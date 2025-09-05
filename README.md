@@ -66,4 +66,4 @@ Hwang, Inchan. Horizontal Stratification of Higher Education and Gender Earnings
 # Contact
 For questions or collaboration inquiries, please contact:
 # Inchan Hwang
-Email: inchan@yonsei.ac.kr
+Email: inchanhwang@utexas.edu
