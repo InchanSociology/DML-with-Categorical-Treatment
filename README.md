@@ -39,9 +39,9 @@ DML combines **orthogonal score functions** and **machine learning-based nuisanc
 ---
 
 The doubly robust score for a binary treatment is:
-$$
+$
 \psi(W; \theta, \eta) = \left( Y - g(X) \right) \cdot \left( D - m(X) \right)
-$$
+$
 where:
 - \( Y \): Outcome variable  
 - \( D \): Treatment indicator  
