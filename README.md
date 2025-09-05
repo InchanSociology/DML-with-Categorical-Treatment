@@ -72,15 +72,16 @@ where:
 ---
 
 ### 3. Extension to Multiple Treatments
-For $$T \in \{1,2,3\}$$ (e.g., three categories of college selectivity):
+For $$ T \in \{1,2,3\}$$ (e.g., three categories of college selectivity):
+
 $$
 \hat{\theta}_t = \frac{1}{n}\sum_{i=1}^n \left[ \frac{\mathbb{1}(T_i=t)(Y_i - \hat{g}_t(X_i))}{\hat{p}_t(X_i)} + \hat{g}_t(X_i) \right]
 $$
 
 where:
 
-- $$\hat{p}_t(X) = \mathbb{P}(T=t|X)$$: Generalized propensity score  
-- $$\hat{g}_t(X) = \mathbb{E}[Y|T=t,X]$$: Outcome regression for treatment $$t$$  
+- $$\hat{p}_t(X) = \mathbb{P}(T=t|X)$$ : Generalized propensity score  
+- $$\hat{g}_t(X) = \mathbb{E}[Y|T=t,X]$$ : Outcome regression for treatment $$t$$  
 
 ---
 
