@@ -59,24 +59,28 @@ Where:
 
 
 
-
 ### 2. DML Estimator
 The DML estimator solves:
 $$
 \hat{\theta} = \frac{1}{n}\sum_{i=1}^n \psi(W_i; \hat{\eta})
 $$
-where \( \hat{\eta} \) are nuisance parameters estimated via machine learning.
+
+where:
+
+- $$\hat{\eta}$$: Nuisance parameters estimated via machine learning  
 
 ---
 
 ### 3. Extension to Multiple Treatments
-For \( T \in \{1,2,3\} \) (e.g., three categories of college selectivity):
+For $$T \in \{1,2,3\}$$ (e.g., three categories of college selectivity):
 $$
 \hat{\theta}_t = \frac{1}{n}\sum_{i=1}^n \left[ \frac{\mathbb{1}(T_i=t)(Y_i - \hat{g}_t(X_i))}{\hat{p}_t(X_i)} + \hat{g}_t(X_i) \right]
 $$
+
 where:
-- \( \hat{p}_t(X) = \mathbb{P}(T=t|X) \): Generalized propensity score  
-- \( \hat{g}_t(X) = \mathbb{E}[Y|T=t,X] \): Outcome regression for treatment \( t \)  
+
+- $$\hat{p}_t(X) = \mathbb{P}(T=t|X)$$: Generalized propensity score  
+- $$\hat{g}_t(X) = \mathbb{E}[Y|T=t,X]$$: Outcome regression for treatment $$t$$  
 
 ---
 
@@ -85,9 +89,9 @@ To reduce overfitting bias, we use **cross-fitting**:
 $$
 \hat{\eta}^{(-k)} = \text{ML estimator trained on folds } \neq k
 $$
-and compute scores on fold \( k \).
 
----
+and compute scores on fold $$k$$.
+
 
 # Repository Purpose
 The purpose of this repository is to provide a detailed demonstration of the DML framework with categorical treatments and to offer a simplified example dataset to help users understand the methodology and replicate the example code.
