@@ -71,7 +71,7 @@ where:
 
 ### 3. Extension to Multiple Treatments
 For 
-$$ T \in \{1,2,3\}$$  
+$$T \in \{1,2,3\}$$  
 (e.g., three categories of college selectivity):
 
 $$
