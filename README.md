@@ -44,12 +44,14 @@ $$
 \psi(W; \theta, \eta) = \left( Y - g(X) \right) \cdot \left( D - m(X) \right)
 $$
 
-where:
-- \( Y \): Outcome variable  
-- \( D \): Treatment indicator  
-- \( X \): Covariates  
-- \( g(X) = \mathbb{E}[Y|X] \): Outcome regression  
-- \( m(X) = \mathbb{E}[D|X] \): Propensity score  
+
+Where:
+
+- $$Y$$: Outcome variable  
+- $$D$$: Treatment indicator  
+- $$X$$: Covariates  
+- $$g(X) = \mathbb{E}[Y|X]$$: Outcome regression  
+- $$m(X) = \mathbb{E}[D|X]$$: Propensity score  
 
 ---
 
