@@ -46,7 +46,7 @@ $$
 $$
 
 ### 3. Extension to Multiple Treatments
-For \( T \in \{1,2,3\} \):
+For $\( T \in \{1,2,3\} \)$ :
 
 
 $$
