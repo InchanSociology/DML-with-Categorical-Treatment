@@ -34,6 +34,27 @@ A simplified example dataset containing 740 observations.
 # Repository Purpose
 The purpose of this repository is to provide a detailed demonstration of the DML framework with categorical treatments and to offer a simplified example dataset to help users understand the methodology and replicate the example code.
 
+
+## 1. Doubly Robust Score Function
+$$
+\psi(W; \theta, \eta) = \left( Y - g(X) \right) \cdot \left( D - m(X) \right)
+$$
+
+### 2. DML Estimator
+$$
+\hat{\theta} = \frac{1}{n}\sum_{i=1}^n \psi(W_i; \hat{\eta})
+$$
+
+### 3. Extension to Multiple Treatments
+For \( T \in \{1,2,3\} \):
+$$
+\hat{\theta}_t = \frac{1}{n}\sum_{i=1}^n \left[ \frac{\mathbb{1}(T_i=t)(Y_i - \hat{g}_t(X_i))}{\hat{p}_t(X_i)} + \hat{g}_t(X_i) \right]
+$$
+
+---
+
+
+
 # Note on Data Confidentiality
 The data used in the published study are confidential and cannot be shared. The materials provided here, including the example dataset, are not replication materials but are intended to illustrate the methodology and implementation.
 
