@@ -47,6 +47,8 @@ $$
 
 ### 3. Extension to Multiple Treatments
 For \( T \in \{1,2,3\} \):
+
+
 $$
 \hat{\theta}_t = \frac{1}{n}\sum_{i=1}^n \left[ \frac{\mathbb{1}(T_i=t)(Y_i - \hat{g}_t(X_i))}{\hat{p}_t(X_i)} + \hat{g}_t(X_i) \right]
 $$
