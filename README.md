@@ -56,11 +56,9 @@ Where:
 ---
 
 
-
-
-
 ### 2. DML Estimator
 The DML estimator solves:
+
 $$
 \hat{\theta} = \frac{1}{n}\sum_{i=1}^n \psi(W_i; \hat{\eta})
 $$
@@ -72,7 +70,9 @@ where:
 ---
 
 ### 3. Extension to Multiple Treatments
-For $$ T \in \{1,2,3\}$$ (e.g., three categories of college selectivity):
+For $$ T \in \{1,2,3\}$$ 
+
+(e.g., three categories of college selectivity):
 
 $$
 \hat{\theta}_t = \frac{1}{n}\sum_{i=1}^n \left[ \frac{\mathbb{1}(T_i=t)(Y_i - \hat{g}_t(X_i))}{\hat{p}_t(X_i)} + \hat{g}_t(X_i) \right]
