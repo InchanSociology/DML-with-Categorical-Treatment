@@ -31,30 +31,57 @@ A simplified example dataset containing 740 observations.
 - Purpose: Since the full dataset used in the study is confidential and too large for practical use in this demonstration, this sample dataset has been created to match the purpose of illustrating the equations and R code.
 - Structure: The dataset includes relevant variables, such as covariates and treatment assignments, used in the R Markdown examples.
 
-# Repository Purpose
-The purpose of this repository is to provide a detailed demonstration of the DML framework with categorical treatments and to offer a simplified example dataset to help users understand the methodology and replicate the example code.
+## 📐 Methodology Overview
 
-
-## 1. Doubly Robust Score Function
-$$
-\psi(W; \theta, \eta) = \left( Y - g(X) \right) \cdot \left( D - m(X) \right)
-$$
-
-### 2. DML Estimator
-$$
-\hat{\theta} = \frac{1}{n}\sum_{i=1}^n \psi(W_i; \hat{\eta})
-$$
-
-### 3. Extension to Multiple Treatments
-For $\( T \in \{1,2,3\} \)$ :
-
-
-$$
-\hat{\theta}_t = \frac{1}{n}\sum_{i=1}^n \left[ \frac{\mathbb{1}(T_i=t)(Y_i - \hat{g}_t(X_i))}{\hat{p}_t(X_i)} + \hat{g}_t(X_i) \right]
-$$
+We apply **Debiased Machine Learning (DML)** to estimate causal effects in the presence of **categorical treatments**.  
+DML combines **orthogonal score functions** and **machine learning-based nuisance estimation** to achieve robustness against high-dimensional covariates.
 
 ---
 
+The doubly robust score for a binary treatment is:
+$$
+\psi(W; \theta, \eta) = \left( Y - g(X) \right) \cdot \left( D - m(X) \right)
+$$
+where:
+- \( Y \): Outcome variable  
+- \( D \): Treatment indicator  
+- \( X \): Covariates  
+- \( g(X) = \mathbb{E}[Y|X] \): Outcome regression  
+- \( m(X) = \mathbb{E}[D|X] \): Propensity score  
+
+---
+
+### 2. DML Estimator
+The DML estimator solves:
+$$
+\hat{\theta} = \frac{1}{n}\sum_{i=1}^n \psi(W_i; \hat{\eta})
+$$
+where \( \hat{\eta} \) are nuisance parameters estimated via machine learning.
+
+---
+
+### 3. Extension to Multiple Treatments
+For \( T \in \{1,2,3\} \) (e.g., three categories of college selectivity):
+$$
+\hat{\theta}_t = \frac{1}{n}\sum_{i=1}^n \left[ \frac{\mathbb{1}(T_i=t)(Y_i - \hat{g}_t(X_i))}{\hat{p}_t(X_i)} + \hat{g}_t(X_i) \right]
+$$
+where:
+- \( \hat{p}_t(X) = \mathbb{P}(T=t|X) \): Generalized propensity score  
+- \( \hat{g}_t(X) = \mathbb{E}[Y|T=t,X] \): Outcome regression for treatment \( t \)  
+
+---
+
+### 4. Cross-Fitting
+To reduce overfitting bias, we use **cross-fitting**:
+$$
+\hat{\eta}^{(-k)} = \text{ML estimator trained on folds } \neq k
+$$
+and compute scores on fold \( k \).
+
+---
+
+# Repository Purpose
+The purpose of this repository is to provide a detailed demonstration of the DML framework with categorical treatments and to offer a simplified example dataset to help users understand the methodology and replicate the example code.
 
 
 # Note on Data Confidentiality
