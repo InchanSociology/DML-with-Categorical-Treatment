@@ -70,21 +70,24 @@ where:
 ---
 
 ### 3. Extension to Multiple Treatments
+
 For 
 $$T \in \{1,2,3\}$$  
 (e.g., three categories of college selectivity):
 
-$$
-\hat{\theta}_t = \frac{1}{n}\sum_{i=1}^n \left[ \frac{\mathbb{1}(T_i=t)(Y_i - \hat{g}_t(X_i))}{\hat{p}_t(X_i)} + \hat{g}_t(X_i) \right]
-$$
 
-where:
+We extend the doubly robust framework to **three categorical treatments**:
 
-Generalized propensity score : 
-$$\hat{p}_t(X) = \mathbb{P}(T=t|X)$$
+\[
+\hat{\mu}_j = \frac{1}{N} \sum_{i=1}^N \Bigg[ \hat{m}_j(X_i) + \frac{\mathbb{1}(T_i = j)}{\hat{e}_j(X_i)} \big( Y_i - \hat{m}_j(X_i) \big) \Bigg], \quad j \in \{0,1,2\}
+\]
 
-Outcome regression for treatment $$t$$ :
-$$\hat{g}_t(X) = \mathbb{E}[Y|T=t,X]$$
+Where:
+- \(\hat{m}_j(X) = \mathbb{E}[Y|T=j,X]\) (Outcome model)
+- \(\hat{e}_j(X) = \mathbb{P}(T=j|X)\) (Generalized propensity score)
+- \(T \in \{0,1,2\}\): Two-year, other four-year, top-tier four-year colleges  
+
+**Double Robustness:** If either \(\hat{m}_j(X)\) or \(\hat{e}_j(X)\) is correctly specified, the estimator remains consistent.
 
 ---
 
