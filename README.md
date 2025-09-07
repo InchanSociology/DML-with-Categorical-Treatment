@@ -101,6 +101,16 @@ $$
 and compute scores on fold $$k$$.
 
 
+---
+
+### 5. Key Assumptions
+- **Unconfoundedness:** All relevant covariates are observed  
+- **Overlap:** \(0 < \hat{e}_j(X) < 1\) for all \(j\)  
+- **SUTVA:** No interference between units  
+
+---
+
+
 # Repository Purpose
 The purpose of this repository is to provide a detailed demonstration of the DML framework with categorical treatments and to offer a simplified example dataset to help users understand the methodology and replicate the example code.
 
