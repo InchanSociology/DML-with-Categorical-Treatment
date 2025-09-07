@@ -1,4 +1,4 @@
-# DML-with-Categorical-Treatment
+# Debiased Machine Learning-with-Categorical-Treatment
 This repository accompanies the analysis conducted in "Horizontal Stratification of Higher Education and Gender Earnings Gap in the Early Labor Market".
 
 The study explores how horizontal stratification in higher education, defined by college selectivity and field of study, influences gender wage gaps in the early labor market. The methodology employs Debiased Machine Learning (DML), a robust causal inference framework, extended to settings involving multiple categorical treatments.
